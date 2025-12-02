@@ -1,0 +1,16 @@
+#core dependencies
+pandas==2.3.2
+requests==2.31.0
+sqlalchemy==2.0.23
+
+#development quality tools
+mypy==1.8.0
+ruff==0.1.9
+pre-commit==3.6.0
+
+
+#optional: additional quality tools
+pytest==7.4.4
+pytest-cov==4.1.0
+
+
