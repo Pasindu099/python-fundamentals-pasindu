@@ -1,0 +1,20 @@
+<users>
+    <user>
+        <id>1</id>
+        <name>Pasindu</name>
+        <email>pasindu@gmail.com</email>
+        <age>25</age>
+    </user>
+    <user>
+        <id>2</id>
+        <name>Lahiru</name>
+        <email>lahiru@gmail.com</email>
+        <age>30</age>
+    </user>
+    <user>
+        <id>3</id>
+        <name>Nimal</name>
+        <email>nimal@gmail.com</email>
+        <age>28</age>
+    </user>
+</users>
