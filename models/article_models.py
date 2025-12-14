@@ -36,9 +36,6 @@ class ScientificArticle(SQLBase):
         return f"<ScientificArticle {self.title}>"
 
 
-
-
-
 class MongoAuthor(EmbeddedDocument):
     full_name = fields.StringField(required=True)
     title = fields.StringField()
@@ -47,7 +44,6 @@ class MongoAuthor(EmbeddedDocument):
 class MongoScientificArticle(Document):
     meta = {
         "collection": "scientific_articles",
-        
         "indexes": [
             {
                 "fields": ["$text"],
@@ -60,7 +56,5 @@ class MongoScientificArticle(Document):
     title = fields.StringField(required=True)
     summary = fields.StringField(required=True)
     arxiv_id = fields.StringField()
-    
     text = fields.StringField(required=True)
-    
     author = fields.EmbeddedDocumentField(MongoAuthor)

@@ -25,13 +25,11 @@ SQLSessionLocal = sessionmaker(bind=sql_engine)
 
 
 def get_sql_session() -> Iterator[Session]:
-    """Provides a transactional scope around a series of operations."""
     session = SQLSessionLocal()
     try:
         yield session
     finally:
         session.close()
-
 
 MONGO_HOST = "localhost"
 MONGO_PORT = 27017
@@ -40,7 +38,6 @@ MONGO_USERNAME = ""
 MONGO_PASSWORD = ""
 
 def setup_mongodb_connection() -> None:
-    """Connects to MongoDB using MongoEngine."""
     connect(
         db=MONGO_DB_NAME,
         host=MONGO_HOST,
@@ -49,7 +46,6 @@ def setup_mongodb_connection() -> None:
     )
 
 def close_mongodb_connection() -> None:
-    """Closes the MongoDB connection."""
     conn = get_connection("default")
     if conn:
         conn.close()
